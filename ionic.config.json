@@ -1,0 +1,7 @@
+{
+  "name": "DiaControl",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
