@@ -1,0 +1,12 @@
+.loginBackground {
+  background-image: url("../../../resources/login.png");
+  background-size: cover;
+}
+.h100 {
+  height: 100%;
+}
+ion-item {
+  --background: transparent;
+  --border-style: none;
+  --highlight-color-focused: transparent;
+}
