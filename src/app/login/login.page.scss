@@ -1,5 +1,5 @@
 .loginBackground {
-  background-image: url("../../../resources/login.png");
+  background-image: url("../../../resources/login_new.png");
   background-size: cover;
 }
 .h100 {
@@ -9,4 +9,11 @@ ion-item {
   --background: transparent;
   --border-style: none;
   --highlight-color-focused: transparent;
+}
+
+ion-button {
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --border-color: white;
+  --color: white;
 }
