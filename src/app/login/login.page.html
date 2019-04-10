@@ -2,13 +2,13 @@
 <ion-grid class="loginBackground h100">
   <ion-row class="h100" style="width: 85%; margin: auto">
     <ion-col align-self-center size-md="6" size-lg="5" size-xs="12" class="h100">
-      <div text-center style="padding-top: 40%; height: 48%" >
+      <div text-center style="padding-top: 30%; height: 35%" >
         <ion-text color="light" >
           <h1 style="font-size: 50px; margin-bottom: 0"><span style="color:#008080">Dia</span>Control</h1>
           <p style="font-size: 15px; margin-top: 0; color: white">Ваш незаменимый помощник</p>
         </ion-text>
       </div>
-      <div style="margin-top: 23%">
+      <div style="margin-top: 10%">
         <ion-item >
           <ion-label position="floating" color="light" style="font-size: 13px; font-weight: lighter">Email</ion-label>
           <ion-input type="text"  color="light"></ion-input>
@@ -21,15 +21,15 @@
         </ion-item>
       </div>
       <div style="margin-top: 15%">
-        <ion-button expand="block"  fill="outline" style="height: 36px;">
+        <ion-button expand="block"  fill="outline" style="height: 40px;">
           <ion-ripple-effect></ion-ripple-effect>
           Войти
         </ion-button>
       </div>
-      <div text-center style="width: 80%;  margin: 7% auto;">
-        <ion-text color="light" style="font-size: 12px">
-          <p>Еще нет аккаунта? Создать</p>
-        </ion-text>
+      <div text-center style="width: 80%;  margin: 10% auto;">
+        <ion-button fill="clear" size="small" style="text-transform: none;" (click)="redirectToRegistrationPage('/registration')">
+          Еще нет аккаунта? Войти
+        </ion-button>
         <ion-text color="light" style="font-size: 10px; font-weight: lighter">
           <p>Регистрируясь, вы даете согласине на обработку персональных данных</p>
         </ion-text>

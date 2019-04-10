@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {AutorisationService} from '../Services/autorisation.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  constructor(private autorisationService: AutorisationService) { }
 
   ngOnInit() {
   }
 
+    redirectToRegistrationPage(path: string): void {
+        this.autorisationService.redirectTo(path);
+    }
 }

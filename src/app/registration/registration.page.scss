@@ -1,0 +1,21 @@
+.h100 {
+  height: 100%;
+}
+ion-item {
+  --background: transparent;
+  --border-style: none;
+  --highlight-color-focused: transparent;
+}
+
+ion-button {
+  --background: transparent;
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --border-color: white;
+  --color: white;
+  --box-shadow: unset;
+}
+
+.bgrWhite {
+  background: white;
+}
