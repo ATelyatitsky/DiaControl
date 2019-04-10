@@ -1,7 +1,11 @@
-.loginBackground {
-  background-image: url("../../../resources/login_teal.jpg");
-  background-size: cover;
+@import url('https://fonts.googleapis.com/css?family=Catamaran:900');
+* {
+  font-family: 'Catamaran', sans-serif;
 }
+.loginBackground {
+  --background: #424c64;
+}
+
 .h100 {
   height: 100%;
 }
@@ -17,4 +21,27 @@ ion-button {
   --border-color: white;
   --color: white;
   --color-activated: white;
+  --border-radius: 25px;
+
+}
+
+.gradien {
+  --background: linear-gradient(to right, #71db99, #56c5f0);
+}
+ion-input {
+  --placeholder-color: #657A86;
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: white;
+  height: 60px;
+  margin-top: 5%;
+  --color: #63d0c5
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+ion-thumbnail {
+  --size: 20%;
 }

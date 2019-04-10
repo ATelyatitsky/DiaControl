@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { LoginPage } from './login.page';
 import {AutorisationService} from '../Services/autorisation.service';
+import {Keyboard} from '@ionic-native/keyboard';
 
 const routes: Routes = [
   {
@@ -23,7 +24,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
     providers: [
-        AutorisationService
+        AutorisationService,
     ],
   declarations: [LoginPage]
 })

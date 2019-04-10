@@ -1,32 +1,36 @@
-<body class="h100" fullscreen="false" >
-<ion-grid class="loginBackground h100">
+<ion-content class="h100 loginBackground" [scrollY]="false">
+<ion-grid class=" h100">
   <ion-row class="h100" style="width: 85%; margin: auto">
-    <ion-col align-self-center size-md="6" size-lg="5" size-xs="12" class="h100">
-      <div text-center style="padding-top: 30%; height: 35%" >
-        <ion-text color="light" >
-          <h1 style="font-size: 50px; margin-bottom: 0"><span style="color:#008080">Dia</span>Control</h1>
-          <p style="font-size: 15px; margin-top: 0; color: white">Ваш незаменимый помощник</p>
-        </ion-text>
+    <ion-col class="h100">
+      <div style="margin-top: 20%; margin-bottom: -5%">
+        <ion-thumbnail style="margin: auto;">
+          <img src="../../assets/image/drop.png">
+        </ion-thumbnail>
       </div>
-      <div style="margin-top: 10%">
-        <ion-item >
-          <ion-label position="floating" color="light" style="font-size: 13px; font-weight: lighter">Email</ion-label>
-          <ion-input type="text"  color="light"></ion-input>
-        </ion-item>
-        <hr style="border-bottom: 1px solid white">
-
-        <ion-item style="margin-top: -15px">
-          <ion-label position="floating" color="light" style="font-size: 13px; font-weight: lighter">Пароль</ion-label>
-          <ion-input type="password" color="light"></ion-input>
-        </ion-item>
+        <div text-center style="height: 20%;">
+          <ion-text color="light">
+            <h1 style="font-size: 50px; margin-bottom: 0"><span style="color:#63d0c5">Glu</span>DROP</h1>
+            <p style="font-size: 15px; margin-top: 0; color: white">Ваш незаменимый помощник</p>
+          </ion-text>
+        </div>
+      <div style=" margin-top: 5%;">
+        <ion-input placeholder="Email" type="Email" text-center ></ion-input>
+        <ion-input placeholder="Пароль" type="password" text-center></ion-input>
       </div>
-      <div style="margin-top: 15%">
-        <ion-button expand="block"  fill="outline" style="height: 40px;">
+      <div text-center style="margin:5% auto 0; padding-bottom: 10px">
+        <ion-button expand="block" fill="outline" size="large" class="gradien">
           <ion-ripple-effect></ion-ripple-effect>
           Войти
         </ion-button>
       </div>
-      <div text-center style="width: 80%;  margin: 10% auto;">
+      <div *ngIf="noBlur" text-center no-padding>
+        <ion-text color="light" style="font-size: 10px; font-weight: lighter">
+          <ion-button fill="clear" size="small" style="text-transform: none;">
+            Забыли пароль?
+          </ion-button>
+        </ion-text>
+      </div>
+      <div *ngIf="noBlur" text-center style="width: 80%;  margin: 10% auto;" >
         <ion-button fill="clear" size="small" style="text-transform: none;" (click)="redirectToRegistrationPage('/registration')">
           Еще нет аккаунта? Войти
         </ion-button>
@@ -37,4 +41,4 @@
     </ion-col>
   </ion-row>
 </ion-grid>
-</body>
+</ion-content>
