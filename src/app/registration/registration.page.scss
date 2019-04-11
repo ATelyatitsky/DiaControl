@@ -9,13 +9,9 @@
   background: white;
 }
 .headerColor {
-  //--background: #424c64;
   --background: linear-gradient(to right, #71db99, #56c5f0);
 }
 
-.gradien {
-  --color: linear-gradient(to right, #71db99, #56c5f0);
-}
 .bthHeaderColor {
   color: white !important;
 }
@@ -54,3 +50,4 @@ ion-item {
 ion-badge {
   color: white;
 }
+

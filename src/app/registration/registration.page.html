@@ -1,12 +1,12 @@
-<ion-content>
+<ion-content [forceOverscroll]="true" [scrollEvents]="true">
   <ion-header>
-    <ion-toolbar class="headerColor bthHeaderColor">
+    <ion-toolbar class="headerColor bthHeaderColor" mode="md">
       <ion-buttons slot="start">
         <ion-button (click)="redirectToLoginPage('/login')">
           <ion-icon slot="icon-only" name="arrow-back" class="bthHeaderColor"> </ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-title class="bthHeaderColor" style="text-align: center;">Регистрация</ion-title>
+      <ion-title class="toolbar-content bthHeaderColor" style="text-align: center; font-weight: normal">Регистрация</ion-title>
       <ion-buttons slot="end">
         <ion-button>
           <ion-icon slot="icon-only" name="arrow-forward" class="bthHeaderColor"></ion-icon>
@@ -115,7 +115,7 @@
           <ion-item>
             <ion-label style="flex: unset"> <ion-icon></ion-icon></ion-label>
           <ion-text style="flex: 1">Углеводов в ХЕ</ion-text>
-            <ion-badge color="secondary" >22</ion-badge>
+            <ion-badge color="secondary" >12</ion-badge>
             <ion-buttons>
             <ion-button> <ion-icon slot="icon-only" name="add"></ion-icon></ion-button>
             <ion-button> <ion-icon slot="icon-only" name="remove"></ion-icon></ion-button>
@@ -152,8 +152,25 @@
       </div>
     </div>
   </div>
+  <div class="row titleNameStyle">
+    <div class="col-md-12">
+      СОГЛАШЕНИЯ
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-text style="flex: 0.9; padding-left: 15px">Участник исследования</ion-text>
+            <ion-toggle checked color="secondary"></ion-toggle>
+          </ion-item>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <div class="row" style="padding-top: 5%;">
+  <div class="row" style="padding-top: 5%; background: whitesmoke;">
     <div class="col-md-12" class="agreeBlock">
       <ion-text>
         <span style="color: grey">Регистрируясь, вы соглашаетесь с</span> <span style="color:#434B59"> политикой конфиденциальности и условиями пользования</span>
