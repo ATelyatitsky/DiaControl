@@ -4,7 +4,7 @@ import {Keyboard} from '@ionic-native/keyboard/ngx';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.page.html',
+  templateUrl: './login-2.html',
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
