@@ -1,29 +1,164 @@
-<body class="h100 bgrWhite" fullscreen="false">
-<ion-header>
-  <ion-toolbar class="headerColor bthHeaderColor">
+<ion-content>
+  <ion-header>
+    <ion-toolbar class="headerColor bthHeaderColor">
+      <ion-buttons slot="start">
+        <ion-button (click)="redirectToLoginPage('/login')">
+          <ion-icon slot="icon-only" name="arrow-back" class="bthHeaderColor"> </ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title class="bthHeaderColor" style="text-align: center;">Регистрация</ion-title>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="arrow-forward" class="bthHeaderColor"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<div class="container-fluid grayBack h100">
 
-  <ion-buttons slot="start">
-    <ion-button (click)="redirectToLoginPage('/login')" class="bthHeaderColor">
-      <ion-icon slot="icon-only" name="arrow-back"> </ion-icon>
-    </ion-button>
-  </ion-buttons>
+  <div class="row titleNameStyle">
+    <div class="col-md-12">
+      ПРОФИЛЬ
+    </div>
+  </div>
 
-    <ion-title style="text-align: center;">Регистрация</ion-title>
+  <div class="row">
+    <div class="col-md-12" >
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-label> <ion-icon name="person"></ion-icon></ion-label>
+            <ion-input placeholder="Имя пользователя"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-label> <ion-icon name="mail"></ion-icon></ion-label>
+            <ion-input placeholder="Email"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-label> <ion-icon name="lock"></ion-icon></ion-label>
+            <ion-input placeholder="Пароль"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <ion-buttons slot="end">
-      <ion-button class="bthHeaderColor">
-        <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+  <div class="row titleNameStyle">
+    <div class="col-md-12">
+      ДАННЫЕ ПАЦИЕНТА
+    </div>
+  </div>
 
-  </ion-toolbar>
-</ion-header>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-label style="flex: unset"><ion-icon name="gift"></ion-icon></ion-label>
+            <ion-text style="flex: 0.9">Дата рождения</ion-text>
+            <ion-datetime displayFormat="DD.MM.YYYY" pickerFormat="DD.MMMM.YYYY" value="01.01.1990"></ion-datetime>
+          </ion-item>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-label style="flex: unset"> <ion-icon name="heart-half"></ion-icon></ion-label>
+            <ion-text style="flex: 0.9">Тип диабета</ion-text>
+            <ion-segment color="secondary" value="II" style="width: 50%">
+              <ion-segment-button value="I">
+                <ion-label>I</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="II">
+                <ion-label>II</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-label style="flex: unset"> <ion-icon name="transgender"></ion-icon></ion-label>
+            <ion-text style="flex: 0.9">Пол</ion-text>
+            <ion-segment color="secondary" value="М" style="width: 50%">
+              <ion-segment-button value="М">
+                <ion-label>М</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="Ж">
+                <ion-label>Ж</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<ion-grid class="h100">
-  <ion-row class="h100" style="width: 85%; margin: auto">
-    <ion-col align-self-center size-md="6" size-lg="5" size-xs="12" class="h100">
+  <div class="row titleNameStyle">
+    <div class="col-md-12">
+      ПРЕДПОЧТЕНИЯ
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-label style="flex: unset"> <ion-icon></ion-icon></ion-label>
+          <ion-text style="flex: 1">Углеводов в ХЕ</ion-text>
+            <ion-badge color="secondary" >22</ion-badge>
+            <ion-buttons>
+            <ion-button> <ion-icon slot="icon-only" name="add"></ion-icon></ion-button>
+            <ion-button> <ion-icon slot="icon-only" name="remove"></ion-icon></ion-button>
+            </ion-buttons>
+          </ion-item>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-label style="flex: unset"><ion-icon name="logo-ionic"></ion-icon></ion-label>
+            <ion-text style="flex: 0.9">Целевой сахар</ion-text>
+            <ion-text >6.5 <span style="color: lightgrey">ммоль/л</span></ion-text>
+          </ion-item>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-label style="flex: unset"><ion-icon name="information-circle-outline" color="danger"></ion-icon></ion-label>
+            <ion-text style="flex: 0.9">Высокий сахар</ion-text>
+            <ion-text >9.0 <span style="color: lightgrey">ммоль/л</span></ion-text>
+          </ion-item>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ion-item>
+            <ion-label style="flex: unset"><ion-icon name="information-circle-outline" color="primary"></ion-icon></ion-label>
+            <ion-text style="flex: 0.9">Низкий сахар</ion-text>
+            <ion-text >4.5 <span style="color: lightgrey">ммоль/л</span></ion-text>
+          </ion-item>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    </ion-col>
-  </ion-row>
-</ion-grid>
-</body>
+  <div class="row" style="padding-top: 5%;">
+    <div class="col-md-12" class="agreeBlock">
+      <ion-text>
+        <span style="color: grey">Регистрируясь, вы соглашаетесь с</span> <span style="color:#434B59"> политикой конфиденциальности и условиями пользования</span>
+      </ion-text>
+    </div>
+  </div>
+</div>
+</ion-content>

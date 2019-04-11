@@ -1,3 +1,7 @@
+* {
+  color: #344B59;
+  font-weight: lighter;
+}
 .h100 {
   height: 100%;
 }
@@ -13,5 +17,40 @@
   --color: linear-gradient(to right, #71db99, #56c5f0);
 }
 .bthHeaderColor {
-  --color: white;
+  color: white !important;
+}
+
+.grayBack {
+  background-color: whitesmoke;
+}
+.col-md-12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+ion-icon {
+  font-size: 20px;
+  color: #657A86;
+}
+ion-label {
+  //padding: 0% 3%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+ion-item {
+  --highlight-color-focused: #00a0a0;
+}
+
+.titleNameStyle {
+  color: #657A86;
+  padding-top: 5%;
+  padding-left: 3%;
+}
+.agreeBlock {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+ion-badge {
+  color: white;
 }
