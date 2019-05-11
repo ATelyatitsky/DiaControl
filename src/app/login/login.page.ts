@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AutorisationService} from '../Services/autorisation.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private autorisationService: AutorisationService) { }
+  public noBlur = true;
   ngOnInit() {
+      window.addEventListener('keyboardWillShow', data => {
+          this.noBlur = false;
+      });
+      window.addEventListener('keyboardWillHide', data => {
+          this.noBlur = true;
+      });
   }
-
+    redirectToRegistrationPage(path: string): void {
+        this.autorisationService.redirectTo(path);
+    }
 }

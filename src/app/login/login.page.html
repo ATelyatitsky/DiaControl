@@ -1,40 +1,78 @@
-<body class="h100" fullscreen="false" >
-<ion-grid class="loginBackground h100">
-  <ion-row class="h100" style="width: 85%; margin: auto">
-    <ion-col align-self-center size-md="6" size-lg="5" size-xs="12" class="h100">
-      <div text-center style="padding-top: 40%; height: 48%" >
-        <ion-text color="light" >
-          <h1 style="font-size: 50px; margin-bottom: 0"><span style="color:#008080">Dia</span>Control</h1>
-          <p style="font-size: 15px; margin-top: 0; color: white">Ваш незаменимый помощник</p>
-        </ion-text>
-      </div>
-      <div style="margin-top: 23%">
-        <ion-item >
-          <ion-label position="floating" color="light" style="font-size: 13px; font-weight: lighter">Email</ion-label>
-          <ion-input type="text"  color="light"></ion-input>
-        </ion-item>
-        <hr style="border-bottom: 1px solid white">
-
-        <ion-item style="margin-top: -15px">
-          <ion-label position="floating" color="light" style="font-size: 13px; font-weight: lighter">Пароль</ion-label>
-          <ion-input type="password" color="light"></ion-input>
-        </ion-item>
-      </div>
-      <div style="margin-top: 15%">
-        <ion-button expand="block"  fill="outline" style="height: 36px;">
-          <ion-ripple-effect></ion-ripple-effect>
-          Войти
-        </ion-button>
-      </div>
-      <div text-center style="width: 80%;  margin: 7% auto;">
-        <ion-text color="light" style="font-size: 12px">
-          <p>Еще нет аккаунта? Создать</p>
-        </ion-text>
-        <ion-text color="light" style="font-size: 10px; font-weight: lighter">
-          <p>Регистрируясь, вы даете согласине на обработку персональных данных</p>
-        </ion-text>
-      </div>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-</body>
+<ion-content class="container-fluid loginBackground" [scrollY]="false">
+    <div class="row h100" style="width: 85%; margin: auto">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4">
+                            <ion-thumbnail style="margin: auto; margin-top: 20%;">
+                                <img src="../../assets/image/drop.png">
+                            </ion-thumbnail>
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="height: 20%;">
+                <div class="col-md-12" text-center>
+                    <ion-text color="light">
+                        <h1 style="font-size: 50px; margin-bottom: 0"><span style="color:#63d0c5">Glu</span>DROP</h1>
+                        <p style="font-size: 15px; margin-top: 0; color: white">Ваш незаменимый помощник</p>
+                    </ion-text>
+                </div>
+            </div>
+            <div class="row" style="height: 40%; ">
+                <div class="col-md-12" text-center>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ion-input placeholder="Email" type="Email" text-center ></ion-input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ion-input placeholder="Пароль" type="password" text-center></ion-input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ion-button expand="block" fill="outline" class="gradien" size="default"  style="margin-top: 5%">
+                                <ion-ripple-effect></ion-ripple-effect>
+                                Войти
+                            </ion-button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ion-text color="light" style="font-size: 10px; font-weight: lighter">
+                                <ion-button fill="clear" size="small" style="text-transform: none;">
+                                    Забыли пароль?
+                                </ion-button>
+                            </ion-text>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" *ngIf="noBlur">
+                <div class="col-md-12" text-center>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ion-button fill="clear" size="small" style="text-transform: none;" (click)="redirectToRegistrationPage('/registration')">
+                                Еще нет аккаунта? Создать
+                            </ion-button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ion-text color="light" style="font-size: 10px; font-weight: lighter">
+                                <p>Регистрируясь, вы даете согласине на обработку персональных данных</p>
+                            </ion-text>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
