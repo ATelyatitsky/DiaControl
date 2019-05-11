@@ -5,13 +5,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPage } from './login.page';
-import {AutorisationService} from '../Services/autorisation.service';
+import { MainAppPage } from './main-app.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginPage
+    redirectTo: 'menu',
+    pathMatch: 'full'
+  },
+  {
+    path: 'menu',
+    loadChildren: './menu/menu.module#MenuPageModule'
   }
 ];
 
@@ -22,9 +26,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-    providers: [
-        AutorisationService,
-    ],
-  declarations: [LoginPage]
+  declarations: [MainAppPage]
 })
-export class LoginPageModule {}
+export class MainAppPageModule {}

@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {LoginPage} from './login/login.page';
 
-const routes: Routes = [
-  { path: '', redirectTo: 'registration', pathMatch: 'full' },
-  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'registration', loadChildren: './registration/registration.module#RegistrationPageModule' },
-];
+const appDiaControlRoutes: Routes = <Routes>[
+    {
+    path: '',
+    component: LoginPage,
+    },
+  {
+    path: 'registration',
+    loadChildren: './registration/registration.module#RegistrationPageModule',
+  },
+    {
+        path: 'main-app',
+        loadChildren: './main-app/main-app.module#MainAppPageModule'
+    }
+]
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(appDiaControlRoutes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })

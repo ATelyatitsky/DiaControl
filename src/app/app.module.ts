@@ -9,14 +9,17 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {Keyboard} from '@ionic-native/keyboard/ngx';
+import {LoginPage} from './login/login.page';
+import {AutorisationService} from './Services/autorisation.service';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginPage],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,
+      AutorisationService,
       Keyboard,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

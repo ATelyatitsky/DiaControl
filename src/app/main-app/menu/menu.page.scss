@@ -1,0 +1,19 @@
+.active {
+  --ion-text-color: var(--ion-color-diaControl-green);
+
+  ion-icon {
+    --ion-text-color-rgb: var(--ion-color-diaControl-green);
+  }
+}
+
+.parent-active {
+  font-weight: 500;
+}
+
+.sub-item {
+  padding-left: 20px;
+  font-size: small;
+}
+.menuTitle{
+  text-align: center;
+}
