@@ -11,11 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import {Keyboard} from '@ionic-native/keyboard/ngx';
 import {LoginPage} from './login/login.page';
 import {AutorisationService} from './Services/autorisation.service';
+import {RoundProgressModule} from 'angular-svg-round-progressbar';
 
 @NgModule({
   declarations: [AppComponent, LoginPage],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, RoundProgressModule],
   providers: [
     StatusBar,
     SplashScreen,

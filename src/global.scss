@@ -15,3 +15,27 @@
 @import './assets/bootstrap/bootstrap.min.css';
 @import './assets/bootstrap/bootstrap-reboot.css';
 @import './assets/bootstrap/bootstrap-reboot.min.css';
+
+.backgroundDiaControl {
+  --background: #424c64;
+  background: #424c64;
+}
+.whiteBackground {
+  --background: white;
+}
+.gradientBackground{
+  --background: var(--ion-color-diaControl-gradient);
+}
+
+.noBackground {
+  --background: unset;
+}
+
+ion-button {
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --border-color: white;
+  --color: white;
+  --color-activated: white;
+  --border-radius: 25px;
+}

@@ -1,11 +1,212 @@
 <ion-header>
-  <ion-toolbar >
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
+    <ion-toolbar class="backgroundDiaControl">
+        <ion-buttons slot="start">
+            <ion-menu-button class="text-white"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content style="padding: unset !important;" class="backgroundDiaControl" scrollY="false">
+    <div class="container">
+<!--        Верхняя панель-->
+        <div class="row">
+            <div class="col-sm-12">
+                <ion-slides [pager]="true" style="right: 15px; padding-bottom: 10px;">
+                    <ion-slide >
+                        <div class="col-4">
+                        <ion-img [src]="'../../../assets/image/glucose.png'"></ion-img>
+                            <p class="text-white sideText">Сахар</p>
+                        </div>
+                        <div class="col-4">
+                           <ion-img [src]="'../../../assets/image/bread.png'"></ion-img>
+                            <p class="text-white sideText">Еда</p>
+                        </div>
+                        <div class="col-4">
+                           <ion-img [src]="'../../../assets/image/syringe.png'"></ion-img>
+                            <p class="text-white sideText">Короткий инсулин</p>
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="col-4">
+                           <ion-img [src]="'../../../assets/image/syringe2.png'"></ion-img>
+                            <p class="text-white sideText">Длинный инсулин</p>
+                        </div>
+                        <div class="col-4">
+                           <ion-img [src]="'../../../assets/image/comments.png'"></ion-img>
+                            <p class="text-white sideText">Комментарий</p>
+                        </div>
+                        <div class="col-4">
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+        <!--        Соотношение-->
+        <div class="row backgroundDiaControl" style="justify-content: center;">
+            <div class="col-sm-12">
+                <p class="text-white text-center">Статистика уровня крови</p>
+            </div>
 
+            <div class="col-3 padding-circle" style="padding-left: 10px;">
+                <div class="circle-title">
+                    <strong>50.0%</strong> <br/>
+                    <span style="font-size: 10px">Низкий</span>
+                </div>
+                <round-progress class="circular-chart unsetWidthHeight" [current]="50"
+                                [max]="100" [radius]="45" [stroke]="4" [color]="'#56c5f0'" [clockwise]="true">
+                </round-progress>
+            </div>
+            <div class="col-3 padding-circle">
+                <div class="circle-title">
+                    <strong>33.0%</strong> <br/>
+                    <span style="font-size: 10px">Нормальный</span>
+                </div>
+                <round-progress class="circular-chart unsetWidthHeight" [current]="33"
+                                [max]="100" [radius]="45" [stroke]="4" [color]="'#4CC790'">
+                </round-progress>
+            </div>
+            <div class="col-3 padding-circle">
+                <div class="circle-title">
+                    <strong>33.0%</strong> <br/>
+                    <span style="font-size: 10px">Высокий</span>
+                </div>
+                <round-progress class="circular-chart unsetWidthHeight" [current]="33"
+                                [max]="100" [radius]="45" [stroke]="4" [color]="'red'">
+                </round-progress>
+            </div>
+        </div>
+<!--        Измерние-->
+        <div class="row">
+            <div class="col-sm-12">
+                <ion-button expand="block" fill="outline" class=" addButton" size="default">
+                    <ion-ripple-effect></ion-ripple-effect>
+                    Добавить запись
+                </ion-button>
+            </div>
+        </div>
+        <!--        Дневник-->
+        <div scrollY="true" class="row heightLastDiv">
+            <div class="col-sm-12" style="padding: unset">
+                <ion-list class="ion-no-padding">
+                    <p class="ion-no-margin text-center" style="margin-top: 10px">Дневник измерений</p>
+                    <ion-item-sliding>
+                        <ion-item>
+                            <ion-card class="whiteBackground w-100">
+                                <ion-card-header style="padding-bottom: 0">
+                                    <ion-card-subtitle class="float-left">
+                                        <ion-icon name="time" class="align-middle"></ion-icon>
+                                        12.11
+                                    </ion-card-subtitle>
+                                    <ion-card-subtitle class="text-right ion-no-margin">Сегодня</ion-card-subtitle>
+                                </ion-card-header>
+
+                                <ion-card-content style="padding-top: 5px">
+                                    <p>7,4 ммоль/л</p>
+                                    <p>7,2 ХЕ</p>
+                                    <p>9 ед</p>
+                                    <p>6 ед</p>
+                                    <p>Комментарий о проделанном измерении</p>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-item>
+                        <ion-item-options side="end">
+                            <ion-item-option (click)="unread(item)" class="redBackground">Удалить</ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+
+                    <ion-item-sliding>
+                        <ion-item>
+                            <ion-card class="whiteBackground w-100">
+                                <ion-card-header style="padding-bottom: 0">
+                                    <ion-card-subtitle class="float-left">
+                                        <ion-icon name="time" class="align-middle"></ion-icon>
+                                        12.11
+                                    </ion-card-subtitle>
+                                    <ion-card-subtitle class="text-right ion-no-margin">Сегодня</ion-card-subtitle>
+                                </ion-card-header>
+
+                                <ion-card-content style="padding-top: 5px">
+                                    <p>7,4 ммоль/л</p>
+                                    <p>7,2 ХЕ</p>
+                                    <p>Комментарий о проделанном измерении</p>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-item>
+                        <ion-item-options side="end">
+                            <ion-item-option class="redBackground" (click)="unread(item)">Удалить</ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+
+                    <ion-item-sliding>
+                        <ion-item>
+                            <ion-card class="whiteBackground w-100">
+                                <ion-card-header style="padding-bottom: 0">
+                                    <ion-card-subtitle class="float-left">
+                                        <ion-icon name="time" class="align-middle"></ion-icon>
+                                        12.11
+                                    </ion-card-subtitle>
+                                    <ion-card-subtitle class="text-right ion-no-margin">Сегодня</ion-card-subtitle>
+                                </ion-card-header>
+
+                                <ion-card-content style="padding-top: 5px">
+                                    <p>7,4 ммоль/л</p>
+                                    <p>7,2 ХЕ</p>
+                                    <p>Комментарий о проделанном измерении</p>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-item>
+                        <ion-item-options side="end">
+                            <ion-item-option class="redBackground" (click)="unread(item)">Удалить</ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+
+                    <ion-item-sliding>
+                        <ion-item>
+                            <ion-card class="whiteBackground w-100">
+                                <ion-card-header style="padding-bottom: 0">
+                                    <ion-card-subtitle class="float-left">
+                                        <ion-icon name="time" class="align-middle"></ion-icon>
+                                        12.11
+                                    </ion-card-subtitle>
+                                    <ion-card-subtitle class="text-right ion-no-margin">Сегодня</ion-card-subtitle>
+                                </ion-card-header>
+
+                                <ion-card-content style="padding-top: 5px">
+                                    <p>7,4 ммоль/л</p>
+                                    <p>7,2 ХЕ</p>
+                                    <p>Комментарий о проделанном измерении</p>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-item>
+                        <ion-item-options side="end">
+                            <ion-item-option class="redBackground" (click)="unread(item)">Удалить</ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+
+                    <ion-item-sliding>
+                        <ion-item>
+                            <ion-card class="whiteBackground w-100">
+                                <ion-card-header style="padding-bottom: 0">
+                                    <ion-card-subtitle class="float-left">
+                                        <ion-icon name="time" class="align-middle"></ion-icon>
+                                        12.11
+                                    </ion-card-subtitle>
+                                    <ion-card-subtitle class="text-right ion-no-margin">Сегодня</ion-card-subtitle>
+                                </ion-card-header>
+
+                                <ion-card-content style="padding-top: 5px">
+                                    <p>7,4 ммоль/л</p>
+                                    <p>7,2 ХЕ</p>
+                                    <p>Комментарий о проделанном измерении</p>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-item>
+                        <ion-item-options side="end">
+                            <ion-item-option class="redBackground" (click)="unread(item)">Удалить</ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+                </ion-list>
+            </div>
+        </div>
+    </div>
 </ion-content>

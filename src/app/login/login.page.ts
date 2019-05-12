@@ -19,7 +19,6 @@ export class LoginPage implements OnInit {
       });
   }
     redirectToRegistrationPage(path: string): void {
-      debugger
         this.autorisationService.redirectTo(path);
     }
 }

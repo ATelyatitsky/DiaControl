@@ -1,0 +1,71 @@
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+}
+
+.redBackground {
+  --background: red;
+}
+
+.unsetWidthHeight {
+  width: unset !important;
+  height: unset !important;
+}
+
+.circle-title {
+  top: 46%;
+  bottom: auto;
+  left: 51%;
+  transform: translateY(-50%) translateX(-50%);
+  font-size: 13px;
+  position: absolute;
+  text-align: center;
+
+  color: white;
+  font-weight: 100;
+  line-height: 1;
+}
+
+.padding-circle {
+  padding: 0 10px
+}
+
+.addButton {
+  margin-top: 5%;
+  width: 85%;
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+.sideText {
+  font-weight: 100;
+  font-size: 12px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  .heightLastDiv {
+    height: 205px;
+    overflow: auto;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .heightLastDiv {
+    height: 270px;
+    overflow: auto;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  .heightLastDiv {
+    height: 400px;
+    overflow: auto;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
+  .heightLastDiv {
+    height: 330px;
+    overflow: auto;
+  }
+}
