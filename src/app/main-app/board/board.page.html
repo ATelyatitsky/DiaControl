@@ -1,8 +1,9 @@
 <ion-header>
-    <ion-toolbar class="backgroundDiaControl">
+    <ion-toolbar class="backgroundDiaControl" mode="md">
         <ion-buttons slot="start">
             <ion-menu-button class="text-white"></ion-menu-button>
         </ion-buttons>
+        <ion-title class="text-white text-center" style="padding-right: 13%">DiaControl</ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -13,29 +14,29 @@
             <div class="col-sm-12">
                 <ion-slides [pager]="true" style="right: 15px; padding-bottom: 10px;">
                     <ion-slide >
-                        <div class="col-4">
+                        <div class="col-3 slidePanel">
                         <ion-img [src]="'../../../assets/image/glucose.png'"></ion-img>
                             <p class="text-white sideText">Сахар</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3 slidePanel">
                            <ion-img [src]="'../../../assets/image/bread.png'"></ion-img>
                             <p class="text-white sideText">Еда</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3 slidePanel">
                            <ion-img [src]="'../../../assets/image/syringe.png'"></ion-img>
                             <p class="text-white sideText">Короткий инсулин</p>
                         </div>
                     </ion-slide>
                     <ion-slide>
-                        <div class="col-4">
+                        <div class="col-3 slidePanel">
                            <ion-img [src]="'../../../assets/image/syringe2.png'"></ion-img>
                             <p class="text-white sideText">Длинный инсулин</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3 slidePanel">
                            <ion-img [src]="'../../../assets/image/comments.png'"></ion-img>
                             <p class="text-white sideText">Комментарий</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3 slidePanel">
                         </div>
                     </ion-slide>
                 </ion-slides>

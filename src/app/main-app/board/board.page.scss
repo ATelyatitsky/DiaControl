@@ -41,6 +41,10 @@
   font-weight: 100;
   font-size: 12px;
 }
+.slidePanel {
+  max-width: 27%;
+  margin: 0 10px;
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
   .heightLastDiv {
