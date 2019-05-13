@@ -11,8 +11,12 @@ import {RoundProgressModule} from 'angular-svg-round-progressbar';
 const routes: Routes = [
   {
     path: '',
-    component: BoardPage
-  }
+    component: BoardPage,
+  },
+    {
+        path: 'record',
+        loadChildren: '../record-add/record-add.module#RecordAddPageModule'
+    }
 ];
 
 @NgModule({

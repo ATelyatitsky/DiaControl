@@ -5,23 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MenuPage } from './menu.page';
+import { RecordAddPage } from './record-add.page';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'board',
-    pathMatch: 'full'
-  },
-  {
-    path: '',
-    component: MenuPage,
-    children: [
-      {
-        path: 'board',
-        loadChildren: '../board/board.module#BoardPageModule'
-      }
-    ]
+    component: RecordAddPage
   }
 ];
 
@@ -32,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [MenuPage]
+  declarations: [RecordAddPage]
 })
-export class MenuPageModule {}
+export class RecordAddPageModule {}
