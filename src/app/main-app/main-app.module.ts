@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MainAppPage } from './main-app.page';
+import {AutorisationService} from '../Services/autorisation.service';
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [MainAppPage]
+  declarations: [MainAppPage],
+  providers: [AutorisationService]
 })
 export class MainAppPageModule {}

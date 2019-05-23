@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12 text-right text-white">
             <div padding style="font-weight: lighter">
-                <p>Отменить</p>
+                <p (click)="goToBoard()">Отменить</p>
             </div>
         </div>
     </div>
@@ -21,68 +21,64 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <ion-slides style="right: 15px; padding-bottom: 10px;" [options]="slidesOpts">
+            <ion-slides #mySlider style="right: 15px; padding-bottom: 10px;" [options]="slidesOpts">
                 <ion-slide>
-                    <div>
+                    <div style="max-width: 60%;">
                         <ion-img [src]="'../../../assets/image/glucose.png'"></ion-img>
                         <p class="text-white sideText">Сахар</p>
                     </div>
                 </ion-slide>
                 <ion-slide>
-                    <div>
+                    <div style="max-width: 60%;">
                         <ion-img [src]="'../../../assets/image/bread.png'"></ion-img>
                         <p class="text-white sideText">Еда</p>
                     </div>
                 </ion-slide>
                 <ion-slide>
-                    <div>
+                    <div class="col-3" style="max-width: 60%; flex: unset;">
                         <ion-img [src]="'../../../assets/image/syringe.png'"></ion-img>
-                        <p class="text-white sideText">Короткий инсулин</p>
+                        <p class="text-white sideText" style="font-size: 14px">Короткий инсулин</p>
                     </div>
                 </ion-slide>
                 <ion-slide>
-                    <div>
+                    <div class="col-3" style="max-width: 60%; flex: unset;">
                         <ion-img [src]="'../../../assets/image/syringe2.png'"></ion-img>
-                        <p class="text-white sideText">Длинный инсулин</p>
+                        <p class="text-white sideText" style="font-size: 14px">Длинный инсулин</p>
                     </div>
                 </ion-slide>
                 <ion-slide>
-                    <div>
+                    <div class="col-3" style="max-width: 62%; flex: unset;">
                         <ion-img [src]="'../../../assets/image/comments.png'"></ion-img>
-                        <p class="text-white sideText">Комментарий</p>
+                        <p class="text-white sideText" style="font-size: 14px">Комментарий</p>
                     </div>
                 </ion-slide>
             </ion-slides>
         </div>
-        <div class="col-sm-12 text-white text-center" style="font-size: 30px; margin-top: 10%">
+        <div class="col-sm-12 text-white text-center" style="font-size: 30px; margin-top: 10%; padding-top: 5%">
             {{valueInt}}.{{valueFloat}} <span style="font-size: 25px">ммоль/л</span>
         </div>
         <div class="col-sm-12">
-            <ion-item class="backgroundDiaControl">
                 <ion-range color="secondary" snaps="true" min="0" max="20" step="1"
                            (ionChange)="rangeChangeInt($event)">
                     <ion-label slot="start" class="text-white">0</ion-label>
                     <ion-label slot="end" class="text-white">20+</ion-label>
                 </ion-range>
-            </ion-item>
-            <ion-item class="backgroundDiaControl">
-                <ion-range color="secondary" snaps="true" min="0" max="9" step="1"
+                <ion-range color="secondary" snaps="true" min="0" max="9" step="1" style="margin-top: 2%"
                            (ionChange)="rangeChangeFloat($event)">
                     <ion-label slot="start" class="text-white">0</ion-label>
                     <ion-label slot="end" class="text-white">0.9</ion-label>
                 </ion-range>
-            </ion-item>
         </div>
     </div>
     <div class="row" class="fab-button-bottom">
         <div class="col-sm-12" style="height: 100px;">
             <ion-fab vertical="center" horizontal="center" slot="fixed" style="left: 45%;">
-                <ion-fab-button style="width: 80px; height: 80px">
+                <ion-fab-button style="width: 80px; height: 80px" (click)="save()">
                     <ion-icon name="checkmark"></ion-icon>
                 </ion-fab-button>
             </ion-fab>
             <ion-fab vertical="center" horizontal="end" slot="fixed" style="left: 65%; top: 60%">
-                <ion-fab-button>
+                <ion-fab-button (click)="next()">
                     <ion-icon name="arrow-dropright"></ion-icon>
                 </ion-fab-button>
             </ion-fab>

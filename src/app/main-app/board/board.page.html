@@ -89,6 +89,14 @@
         <div scrollY="true" class="row heightLastDiv">
             <div class="col-sm-12" style="padding: unset">
                 <ion-list class="ion-no-padding">
+                    <ion-refresher (ionRefresh)="doRefresh($event)" style="position: unset;">
+                        <ion-refresher-content
+                                pullingIcon="arrow-dropdown"
+                                pullingText="Обновить"
+                                refreshingSpinner="circles"
+                                refreshingText="Обновление...">
+                        </ion-refresher-content>
+                    </ion-refresher>
                     <p class="ion-no-margin text-center" style="margin-top: 10px">Дневник измерений</p>
                     <ion-item-sliding>
                         <ion-item>
